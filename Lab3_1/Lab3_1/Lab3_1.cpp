@@ -1,12 +1,17 @@
 ﻿
-#include <iostream>;
+#include <iostream>
+#include <random>
+#include <string>
 using namespace  std;
 
-int main(){
+int main1(){
 	locale::global(locale("Russian_Russia.1251"));
-	srand(time(NULL));
-	char N[5] = { rand() % 10000 + 0 };
-	char *p = N;
-	cout << "Рандомное число: " << p << "\n";
+	srand(static_cast<unsigned int>(time(NULL)));
+	int random = rand() % 10000;
+	cout << random << "\n";
+	string str = to_string(random);
+	for (int i = 0 ; i < str.length(); i++) {
+		cout << str[i] << "\n";
+	}
 	return 0;
 }

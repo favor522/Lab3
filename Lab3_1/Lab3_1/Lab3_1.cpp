@@ -4,7 +4,7 @@
 #include <string>
 using namespace  std;
 
-int main1(){
+int main(){
 	locale::global(locale("Russian_Russia.1251"));
 	srand(static_cast<unsigned int>(time(NULL)));
 	int random = rand() % 10000;
